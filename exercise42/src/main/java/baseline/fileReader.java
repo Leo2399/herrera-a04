@@ -2,18 +2,26 @@ package baseline;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class fileReader {
 
-    private ArrayList<String> parseData() throws FileNotFoundException {
-        Scanner inputFile = new Scanner(new File("data/exercise42_input.txt"));
+   public void parseData() throws FileNotFoundException {
+
         // Open file and read the data
-        // Store data in an array list
+       File inputFile = new File("data/exercise42_input.txt");
+        try (Scanner input = new Scanner(inputFile)) {
 
-       ArrayList<String> data = new ArrayList<>();
+            while (input.hasNextLine()) {
+                // Remove the commas from the text file
+                // by splitting after each comma and storing that
+                // string in an array
+                String s = input.nextLine();
+                String[] data = s.split(",");
 
-        return data;
+                // Print the data form the text file
+                System.out.printf("%-10s%-10s%-10s%n", data[0], data[1], data[2]);
+            }
+        }
     }
 }
