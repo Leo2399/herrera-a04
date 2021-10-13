@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution41 {
+    +main()
+        ' open text file to read from
+        ' ArrayList<String> names = new ArrayList<>()
+        ' call readName method to read names in file, and add them into the array list.
+        ' call writeOutput method to write sorted names into a txt file.
+    -readName()
+        ' reads names from input file
+        ' store each name into arraylist
+    -writeOutput()
+        ' create an output file to store the sorted names
+}
+
+@enduml
