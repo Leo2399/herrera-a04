@@ -11,8 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class fileReaderTest {
 
     @Test
-    void parseData(){
+    void parseData() throws FileNotFoundException {
+        fileReader test = new fileReader();
         File input = new File("data/exercise42_input.txt");
-        Assertions.assertTrue(input.exists());
+        File actual = test.parseData();
+
+        assertEquals(input, actual);
     }
 }
