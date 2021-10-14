@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class fileReader {
 
-   public void parseData() throws FileNotFoundException {
+   public File parseData() throws FileNotFoundException {
 
         // Open file and read the data
        File inputFile = new File("data/exercise42_input.txt");
@@ -23,5 +23,6 @@ public class fileReader {
                 System.out.printf("%-10s%-10s%-10s%n", data[0], data[1], data[2]);
             }
         }
-    }
+       return inputFile;
+   }
 }
