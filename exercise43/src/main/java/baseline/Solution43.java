@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Leonardo Herrera
+ */
+
 package baseline;
 
 import java.io.IOException;
@@ -7,7 +12,7 @@ public class Solution43 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    // Using this public string to
+    // Using this public string to not have to write the same string multiple times
     public static final String Created = "Created ";
 
     public static void main(String[] args) throws IOException {
