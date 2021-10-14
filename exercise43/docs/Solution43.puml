@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution43{
+    main()
+}
+
+class SiteGenerator{
+    +createSite()
+    +createJSFolder()
+    +createCSSFolder()
+    +createHTML()
+}
+
+Solution43<--SiteGenerator
+@enduml
