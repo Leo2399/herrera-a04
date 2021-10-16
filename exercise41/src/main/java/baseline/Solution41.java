@@ -7,55 +7,27 @@ package baseline;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
-
+/*
+ Initially I had the whole program in one class, but then decided to split it
+ into multiple classes
+ */
 public class Solution41 {
 
     public static void main(String[] args) throws IOException {
 
-        String input = "data/exercise41_input.txt";
-        Scanner inputFile = new Scanner(new File(input));
+        // NameSorter object
+        NameSorter read = new NameSorter();
+
         // read the input file
+        read.readNames();
+
         // store names in an array list
-        ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> names = read.getNames();
 
-        // call readNames() function
-        readNames(inputFile,names);
-
-        // sort the names in alphabetical order
-        Collections.sort(names);
-
-        // call the writeOutput() function
-        writeOutput(names);
-
-        // close the input file
-        inputFile.close();
-
-    }
-
-     public static void readNames(Scanner in, ArrayList<String> names){
-        // use this function to read the names from the input file
-        // go through the file and read each name
-        while(in.hasNextLine()){
-            names.add(in.nextLine());
-        }
-    }
-
-     public static void writeOutput(ArrayList<String> names) throws IOException {
-        //use this function to write the output txt file
-        String output = "data/exercise41_output.txt";
-        // create the output file to write into it
-        FileWriter outputFile = new FileWriter(output);
-        // have the number of names in the files read
-
-        outputFile.write("Total of "+names.size()+" names\n");
+        // WriteFile object
+        WriteFile w = new WriteFile(names);
 
         // write the output file
-        for(String i : names){
-            outputFile.write(i + "\n");
-        }
-        // close the output file
-        outputFile.close();
+        w.write();
     }
 }
