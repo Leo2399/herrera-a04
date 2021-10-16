@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution44{
+    main()
+}
+
+class ReadJSONFile{
+    +readJson()
+    +displayProduct()
+}
+
+
+@enduml
