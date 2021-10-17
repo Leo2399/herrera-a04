@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution46 {
+    main ()
+}
+
+class ReadFile {
+    +readFile ()
+    +getMap (): return HashMap
+}
+
+class PrintFrequency {
+    +display ()
+}
+
+Solution46 <-- ReadFile
+Solution46 <-- PrintFrequency
+@enduml

@@ -1,0 +1,10 @@
+
+A
+java:S1068
+"&Remove this unused "in" private field.(Ó‘š„ûÿÿÿÿ
+H
+java:S1068"-Remove this unused "inputFile" private field.(¨†Ùûÿÿÿÿ
+D
+java:S1068")Remove this unused "words" private field.(¾¾ëüÿÿÿÿ
+ˆ
+java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(‡ô¸öüÿÿÿÿ
